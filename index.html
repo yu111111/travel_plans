@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7-8月 旅行アイディア</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+        .container {
+            max-width: 960px;
+            margin: 40px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: #343a40;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.1rem;
+            color: #6c757d;
+        }
+        .plan-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .plan-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .plan-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        }
+        .plan-item img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        .plan-item:hover img {
+            transform: scale(1.05);
+        }
+        .plan-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 40px 20px 20px;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            font-size: 1.6em;
+            font-weight: bold;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #dee2e6;
+            margin: 60px 0;
+        }
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #343a40;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            max-width: 600px;
+            margin: 20px auto;
+            color: #495057;
+        }
+        li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+        }
+        li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #007bff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>7-8月 旅行アイディア</h1>
+        <p>この時期の旅行は、日本の夏の魅力を満喫できる一方で、いくつかの特徴があります。</p>
+        <p>今回は、目的別に4つのテーマで、具体的なプランを提案します。</p>
+
+        <div class="plan-grid">
+            <a href="kamikochi_azumino.html" class="plan-item">
+                <img src="image/上高地.jpg" alt="上高地と安曇野">
+                <div class="plan-overlay">究極の避暑</div>
+            </a>
+            <a href="hokkaido_dotou.html" class="plan-item">
+                <img src="image/北海道.jpg" alt="北海道・道東">
+                <div class="plan-overlay">大自然</div>
+            </a>
+            <a href="okinawa_miyako.html" class="plan-item">
+                <img src="image/宮古諸島.jpg" alt="沖縄・宮古諸島">
+                <div class="plan-overlay">島時間</div>
+            </a>
+            <a href="aomori_nebuta.html" class="plan-item">
+                <img src="image/青森.jpg" alt="青森ねぶた祭">
+                <div class="plan-overlay">文化体験</div>
+            </a>
+        </div>
+
+        <hr>
+
+        <h3>旅行計画の共通アドバイス</h3>
+        <ul>
+            <li><b>予約は最優先で！：</b> 7-8月はピークシーズンです。航空券や新幹線、宿泊施設は<b>【3ヶ月前、人気日程なら半年前】</b>には予約を済ませましょう。</li>
+            <li><b>暑さ対策は万全に：</b> 帽子、サングラス、日焼け止め、携帯扇風機は必須。こまめな水分・塩分補給を忘れずに。</li>
+            <li><b>台風リスクを念頭に：</b> 特に沖縄や九州方面は台風シーズンです。旅程に余裕を持たせ、万が一の際のキャンセルポリシーを確認しておきましょう。</li>
+        </ul>
+    </div>
+</body>
+</html>
