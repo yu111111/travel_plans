@@ -11,10 +11,10 @@ body {
 
 /* Container for content */
 .container {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 30px;
-    background: #1a1a1a; /* Changed to match body background for borderless effect */
+    max-width: 100%;
+    margin: 0 auto 40px auto; /* 上部のマージンを0に設定 */
+    padding: 100px 0 0 0; /* ヘッダーの高さ分、上部にパディングを追加 */
+    background: #FFFFFF; /* Changed to match body background for borderless effect */
     border-radius: 0;
     box-shadow: none;
 }
@@ -29,8 +29,15 @@ h1, h2, h3, h4 {
 h1 {
     font-size: 2.8rem;
     text-align: center;
-    margin-bottom: 30px;
     letter-spacing: -0.03em;
+    position: fixed; /* ヘッダーを固定 */
+    top: 0; /* 上部に配置 */
+    width: 100%; /* 幅を100%に */
+    background-color: #333333; /* モダンなグレーの背景色 */
+    color: #ffffff; /* 白い文字色 */
+    padding: 20px 0; /* 上下のパディング */
+    z-index: 1000; /* 他の要素より手前に表示 */
+    margin: 0; /* デフォルトのマージンをリセット */
 }
 
 h3 {
@@ -63,8 +70,11 @@ h4 {
 /* Paragraphs */
 p {
     font-size: 1.05rem;
-    color: #cccccc; /* Lighter gray for body text */
+    text-align: center;
+    color: #000; /* Lighter gray for body text */
     line-height: 1.7;
+    max-width: 700px;
+    margin: 20px auto;
     margin-bottom: 15px;
 }
 
@@ -74,6 +84,8 @@ p {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
     margin-top: 40px;
+    max-width: 900px; /* 最大幅を900pxに設定 */
+    margin: 40px auto; /* 中央に配置 */
 }
 
 .plan-item {
@@ -93,14 +105,13 @@ p {
 
 .plan-item img {
     width: 100%;
-    height: 200px; /* Keep height for consistency, aspect-ratio will handle square */
-    aspect-ratio: 1 / 1; /* Make image square */
+    aspect-ratio: 1 / 1; /* Make image container square */
     object-fit: cover;
     display: block;
     transition: transform 0.3s ease;
     border-radius: 0;
     box-shadow: none;
-    opacity: 0.8; /* Changed opacity to 0.8 */
+    opacity: 1; /* Make image fully opaque */
 }
 
 .plan-item:hover img {
@@ -109,20 +120,23 @@ p {
 
 .plan-overlay {
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     width: 100%;
-    padding: 30px 20px 20px;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    height: 100%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.250); /* Changed to a semi-transparent overlay */
     color: white;
     display: flex;
     align-items: center; /* Centered vertically */
     justify-content: center; /* Centered horizontally */
+    text-align: center; /* Good for multi-line text */
     font-size: 1.5em;
     font-weight: 700;
     opacity: 1;
     transition: opacity 0.3s ease;
     text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    box-sizing: border-box; /* Ensures padding is included in the element's total width and height */
 }
 
 /* Horizontal Rule */
@@ -140,7 +154,7 @@ ul {
     text-align: left;
     max-width: 700px;
     margin: 20px auto;
-    color: #cccccc;
+    color: #000;
 }
 
 li {
@@ -227,10 +241,9 @@ td b {
 
 /* Images */
 img {
-    max-width: 100%;
+    max-width: 900px;
     height: auto;
     border-radius: 0;
     display: block;
-    margin: 20px auto;
     box-shadow: none;
 }
