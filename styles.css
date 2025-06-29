@@ -3,43 +3,43 @@ body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
-    background-color: #f0f2f5; /* Light gray background */
-    color: #333; /* Darker text for readability */
+    background-color: #1a1a1a; /* Dark background */
+    color: #e0e0e0; /* Light text for readability */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 /* Container for content */
 .container {
-    max-width: 1000px; /* Slightly wider container */
-    margin: 40px auto; /* Centered with vertical spacing */
-    padding: 30px; /* Increased padding */
-    background: #ffffff; /* Clean white background for content */
-    border-radius: 10px; /* Soft rounded corners */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #1a1a1a; /* Changed to match body background for borderless effect */
+    border-radius: 0;
+    box-shadow: none;
 }
 
 /* Headings */
 h1, h2, h3, h4 {
-    font-weight: 600; /* Semi-bold for modern look */
-    color: #2c3e50; /* Dark blue-gray for headings */
+    font-weight: 600;
+    color: #ffffff; /* White for headings */
     margin-bottom: 15px;
 }
 
 h1 {
-    font-size: 2.8rem; /* Larger main heading */
+    font-size: 2.8rem;
     text-align: center;
     margin-bottom: 30px;
-    letter-spacing: -0.03em; /* Tighter letter spacing */
+    letter-spacing: -0.03em;
 }
 
 h3 {
     font-size: 1.8rem;
-    border-bottom: none; /* Remove border for borderless design */
+    border-bottom: none;
     padding-bottom: 0;
     margin-top: 40px;
     position: relative;
-    padding-left: 20px; /* Indent for a clean look */
+    padding-left: 20px;
 }
 
 h3::before {
@@ -48,22 +48,22 @@ h3::before {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 8px; /* Small accent line */
+    width: 8px;
     height: 8px;
-    background-color: #007bff; /* Accent color */
+    background-color: #66ccff; /* Bright blue accent */
     border-radius: 50%;
 }
 
 h4 {
     font-size: 1.3rem;
-    color: #007bff; /* Accent color for sub-headings */
+    color: #66ccff; /* Bright blue accent for sub-headings */
     margin-top: 25px;
 }
 
 /* Paragraphs */
 p {
     font-size: 1.05rem;
-    color: #555; /* Softer black for body text */
+    color: #cccccc; /* Lighter gray for body text */
     line-height: 1.7;
     margin-bottom: 15px;
 }
@@ -72,34 +72,39 @@ p {
 .plan-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px; /* Slightly reduced gap */
+    gap: 25px;
     margin-top: 40px;
 }
 
 .plan-item {
     position: relative;
     overflow: hidden;
-    border-radius: 10px; /* Consistent rounded corners */
+    border-radius: 0;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: #fff; /* Ensure white background */
+    background-color: #333333; /* Darker background for items */
+    box-shadow: none;
 }
 
 .plan-item:hover {
-    transform: translateY(-5px); /* Subtle lift effect */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 .plan-item img {
     width: 100%;
-    height: 200px; /* Slightly reduced height */
+    height: 200px; /* Keep height for consistency, aspect-ratio will handle square */
+    aspect-ratio: 1 / 1; /* Make image square */
     object-fit: cover;
     display: block;
     transition: transform 0.3s ease;
+    border-radius: 0;
+    box-shadow: none;
+    opacity: 0.8; /* Changed opacity to 0.8 */
 }
 
 .plan-item:hover img {
-    transform: scale(1.03); /* Subtle zoom on hover */
+    transform: scale(1.03);
 }
 
 .plan-overlay {
@@ -107,24 +112,24 @@ p {
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 30px 20px 20px; /* Adjusted padding */
-    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent); /* Softer gradient */
+    padding: 30px 20px 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
     color: white;
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    font-size: 1.5em; /* Slightly smaller font */
-    font-weight: 700; /* Bolder text */
+    align-items: center; /* Centered vertically */
+    justify-content: center; /* Centered horizontally */
+    font-size: 1.5em;
+    font-weight: 700;
     opacity: 1;
     transition: opacity 0.3s ease;
-    text-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Text shadow for readability */
+    text-shadow: 0 2px 5px rgba(0,0,0,0.5);
 }
 
 /* Horizontal Rule */
 hr {
-    border: none; /* Remove default border */
+    border: none;
     height: 1px;
-    background-color: #e0e0e0; /* Lighter separator */
+    background-color: #444444;
     margin: 50px 0;
 }
 
@@ -133,22 +138,22 @@ ul {
     list-style: none;
     padding: 0;
     text-align: left;
-    max-width: 700px; /* Wider lists */
+    max-width: 700px;
     margin: 20px auto;
-    color: #444; /* Darker list text */
+    color: #cccccc;
 }
 
 li {
-    margin-bottom: 12px; /* Slightly reduced margin */
-    padding-left: 30px; /* Increased padding for checkmark */
+    margin-bottom: 12px;
+    padding-left: 30px;
     position: relative;
 }
 
 li::before {
-    content: '\2713'; /* Unicode checkmark */
+    content: '\2713';
     position: absolute;
     left: 0;
-    color: #28a745; /* Green for checkmark */
+    color: #66ccff;
     font-weight: bold;
     font-size: 1.1em;
 }
@@ -156,7 +161,7 @@ li::before {
 /* Bold text within content */
 b {
     font-weight: 600;
-    color: #007bff; /* Accent color for bold text */
+    color: #66ccff;
 }
 
 /* Tables */
@@ -164,66 +169,68 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin: 30px 0;
-    font-size: 0.9em; /* Slightly smaller font for tables */
-    background-color: #fdfdfd; /* Off-white background for tables */
-    border-radius: 8px;
-    overflow: hidden; /* Ensures rounded corners apply to content */
+    font-size: 0.9em;
+    background-color: #333333;
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: none;
 }
 
 th, td {
-    border: none; /* Remove table borders */
-    padding: 15px 20px; /* Increased padding */
+    border: none;
+    padding: 15px 20px;
     text-align: left;
 }
 
 th {
-    background-color: #e9ecef; /* Light gray for table headers */
-    font-weight: 700; /* Bolder headers */
-    color: #495057;
-    text-transform: uppercase; /* Uppercase for headers */
+    background-color: #444444;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
     letter-spacing: 0.05em;
 }
 
 tr:nth-child(even) {
-    background-color: #f8f9fa; /* Zebra striping for rows */
+    background-color: #3a3a3a;
 }
 
 td b {
-    color: #333; /* Darker bold text in table cells */
+    color: #ffffff;
 }
 
 /* Back Link */
 .back-link {
-    display: inline-flex; /* Use flex for alignment */
+    display: inline-flex;
     align-items: center;
-    gap: 8px; /* Space between arrow and text */
-    margin-top: 40px; /* Increased margin */
-    padding: 12px 25px; /* Larger padding */
-    color: #007bff; /* Accent color */
+    gap: 8px;
+    margin-top: 40px;
+    padding: 12px 25px;
+    color: #66ccff;
     text-decoration: none;
-    border: 1px solid #007bff; /* Border with accent color */
-    border-radius: 50px; /* Pill shape */
-    transition: all 0.3s ease; /* Smooth transition for all properties */
+    border: none;
+    border-radius: 0;
+    transition: all 0.3s ease;
     font-weight: 500;
+    background-color: transparent;
 }
 
 .back-link:hover {
-    background-color: #007bff; /* Solid background on hover */
-    color: #fff; /* White text on hover */
-    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.2); /* Subtle shadow on hover */
+    background-color: rgba(102, 204, 255, 0.1);
+    color: #66ccff;
+    box-shadow: none;
 }
 
 .back-link::before {
-    content: '\2190'; /* Left arrow unicode */
+    content: '\2190';
     font-size: 1.2em;
 }
 
 /* Images */
 img {
-    max-width: 100%; /* Ensure images are responsive */
+    max-width: 100%;
     height: auto;
-    border-radius: 8px; /* Consistent rounded corners */
+    border-radius: 0;
     display: block;
-    margin: 20px auto; /* Centered with vertical spacing */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Subtle shadow for images */
+    margin: 20px auto;
+    box-shadow: none;
 }
