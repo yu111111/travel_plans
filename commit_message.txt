@@ -1,1 +1,0 @@
-Feat: Adjust image opacity, center overlay text, and square images
